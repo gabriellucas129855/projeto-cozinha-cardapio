@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema do Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <main>
+         <form>
+            <header>
+
+                <h1>Sistema do Cardápio</h1>
+                <button type="submit" value="Sair">Sair</button>
+            </header>
+            <main>
+                <section>
+             <h3>lista de cardapios</h3>
+
+             <table>
+  <tr>
+    <th>Turno</th>
+    <th>data</th>
+    <th>refeição</th>
+    <th>lanche</th>
+  </tr>
+  <tr>
+    <td>manhã</td>
+    <td>22-04-25</td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td>tarde</td>
+    <td>22-04-25</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>noite</td>
+    <td>22-04-25</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Integral</td>
+    <td>22-04-25</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>  
+
+
+<section>
+     <h3>Fale Conosco</h3>
+    <select name="" id="">
+            <option value=""></option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="elogio">Elogio</option>
+            <option value="outros">Outros</option>
+    </select><br> 
+    
+    <textarea name="opiniao" id="opiniao"></textarea><br>
+            <button type="submit" value="enviar">Enviar</button>
+</section>
+<aside>
+    <h3>Cadastrar Prato</h3>
+    <form action="">
+        <input type="date" name="data" id="data"><br>
+        <select name="turno" id="turno">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="integral">Integral</option>
+        </select><br>
+        <input type="text" placeholder="titulo"><br>
+        <textarea name="itens" id="itens" placeholder="Itens"></textarea><br>
+        <input type="text" name="bebida" id="bebida" placeholder="Bebida"><br>
+        <button type="submit" value="inserir-img" aria-placeholder="inserir img"></button><br>
+        <button type="submit" value="cadastrar">Cadastrar</button>
+</aside>
+    </main>
+
+
+                </section>
+            </main>
+
+         </form>
+     </main>
+ </body>
+ </html>
