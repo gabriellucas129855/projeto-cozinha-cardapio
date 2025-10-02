@@ -1,18 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
-
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    background-color: rgb(241, 240, 240);
+
+
+a {
+   text-decoration: none;
+}
+
+
+body {
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: "Inter", sans-serif;
+}
+
+main {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+
+main div {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 25px;
+   min-width: 700px;
+}
+
+
+fieldset {
+   height: 66px;
+   width: 422px;
+   border-radius: 10px;
+   margin-top: 25px;
+   border: 1px solid black;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+}
+
+
+legend {
+   font-size: 24px;
+   font-family: "Inter";
+}
+
+input {
+   height: 30px;
+   width: 500px;
+   outline: none;
+   border: 0;
+   font-size: 24px;
+
 
 }
-@media (max-width:768px) {
-    body{ background-color: #0000ff;
 
-    }
+button {
+   height: 72px;
+   width: 450px;
+   border-radius: 10px;
+   border: 0;
+   background-color: rgb(48, 58, 255);
+   color: white;
+   font-size: 20px;
+   margin-top: 25px;
+   justify-content: center;
+}
 
-    
+form {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+@media(max-width:768px) {
+   body {
+      background-color: lab(#303aff);
+      font-family: "Inter", sans-serif;
+      display: flex;
+      justify-content: center;
+   }
+}
+
+header {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   font-size: 20px;
+   font-family: "Inter";
+   font-style: "Regular";
+   color: #0059FF;
+}
+
+h2,
+div a {
+   color: #312Aff;
+}
+
+h3,
+.desativado {
+   color: rgba(0, 0, 0, 0.43);
+}
+
+
+figure {
+   width: 422px;
+   display: flex;
+   justify-content: space-between;
 }

@@ -1,95 +1,110 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema do Cardápio</title>
-    <link rel="stylesheet" href="style.css">
- </head>
- <body>
-     <main>
-         <form>
-            <header>
-
-                <h1>Sistema do Cardápio</h1>
-                <button type="submit" value="Sair">Sair</button>
-            </header>
-            <main>
-                <section>
-             <h3>lista de cardapios</h3>
-
-             <table>
-  <tr>
-    <th>Turno</th>
-    <th>data</th>
-    <th>refeição</th>
-    <th>lanche</th>
-  </tr>
-  <tr>
-    <td>manhã</td>
-    <td>22-04-25</td>
-    <td></td>
-    <td></td>
-    
-  </tr>
-  <tr>
-    <td>tarde</td>
-    <td>22-04-25</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>noite</td>
-    <td>22-04-25</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Integral</td>
-    <td>22-04-25</td>
-    <td></td>
-    <td></td>
-  </tr>
-
-</table>  
+<!DOCTYPE html>
+<html lang="pt-br">
 
 
-<section>
-     <h3>Fale Conosco</h3>
-    <select name="" id="">
-            <option value=""></option>
-            <option value="reclamacao">Reclamação</option>
-            <option value="sugestao">Sugestão</option>
-            <option value="elogio">Elogio</option>
-            <option value="outros">Outros</option>
-    </select><br> 
-    
-    <textarea name="opiniao" id="opiniao"></textarea><br>
-            <button type="submit" value="enviar">Enviar</button>
-</section>
-<aside>
-    <h3>Cadastrar Prato</h3>
-    <form action="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="sistema.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>Sistema Cozinha</h1>
+    <button type="submit" value="sair">Sair</button>
+  </header>
+  <main>
+    <div>
+      <section class="tabela">
+        <h3>Lista de Cardapio</h3>
+        <table>
+          <tr>
+            <th>Turno</th>
+            <th>Data</th>
+            <th>Refeição</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+          </tr>
+          <tr>
+            <td>Manhã</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Tarde</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Noite</td>
+            <td>22/09/2025</td>
+            <td>Jantar</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
+          <tr>
+            <td>Integral</td>
+            <td>22/09/2025</td>
+            <td>Lanche</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+
+
+
+
+        </table>
+
+
+
+
+      </section>
+      <section class="conosco">
+        <div class="h3">
+          <h3>Fale Conosco</h3>
+        </div>
+        <div class="opcao">
+          <div>
+            <select name="" id="">
+              <option value="">Escolha uma opção</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="elogio">Elogio</option>
+              <option value="outro">Outro</option>
+            </select><br> <!--  Vamos copiar do codigo original -->
+            <textarea name="opiniao" id="opiniao" placeholder="Digite sua opinião aqui..."
+              disabled="disabled"></textarea><br>
+          </div>
+          <button type="submit" value="enviar">Enviar</button>
+        </div>
+      </section>
+    </div>
+    <aside>
+      <h3>Cadastrar Prato</h3>
+      <form action="">
         <input type="date" name="data" id="data"><br>
         <select name="turno" id="turno">
-            <option value="manha">Manhã</option>
-            <option value="tarde">Tarde</option>
-            <option value="noite">Noite</option>
-            <option value="integral">Integral</option>
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+          <option value="integral">Integral</option>
         </select><br>
         <input type="text" placeholder="titulo"><br>
         <textarea name="itens" id="itens" placeholder="Itens"></textarea><br>
         <input type="text" name="bebida" id="bebida" placeholder="Bebida"><br>
         <button type="submit" value="inserir-img" aria-placeholder="inserir img"></button><br>
         <button type="submit" value="cadastrar">Cadastrar</button>
-</aside>
-    </main>
+    </aside>
+  </main>
+  <footer>
+    <p><span>Desenvolvido: Gabriel Lucas</span></p>
+  </footer>
+</body>
 
 
-                </section>
-            </main>
-
-         </form>
-     </main>
- </body>
- </html>
+</html>
