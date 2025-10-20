@@ -1,175 +1,419 @@
-@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 body {
-    background-color: blue;
+    background-color: #303AFF;
 }
-
-
-main {
-    display: flex;
-}
-
-
-footer {
-    background-color: blue;
-    color: white;
-    padding: 20px 300px;
-    font-size: 32px;
-    font-family: "Inika";
-}
-
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    padding: 20px 10px;
+    height: 181px;
+    color: #303AFF;
 }
 
 
-header h1 {
-    margin: 0 auto;
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main div{
+    
+    width: 100%;
+}
+div select{
+    width:90%;
+}
+
+div textarea{
+    width:88%;
+}
+
+h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
     text-align: center;
-    flex: 1;
-    font-size: 96px;
-    font-family: "Inika";
-    font-style: "Inika";
+    background: #303AFF;
+    padding: 50px;
 }
 
+h1 {
+    font-size: 96px;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    
+
+}
+
+h3 {
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+h5{
+    font-size: 36px;
+    color:white;
+    margin: 0;
+    font-family: "Inika", sans-serif;
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid #DADADA;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+
+
+}
 
 header button {
-    width: 217px;
-    height: 78px;
-    border-radius: 100px;
+    background-color: #ffffff;
+    color: #303AFF;
+}
+
+button {
+    border-radius: 25px;
     border: 0;
-    background-color: white;
-    color: #2550ff;
-    font-size: 24px;
-    font-style: "Regular";
-    font-family: "Inknut Antiqua";
+    height: 40px;
+    text-align: center;
+    width: 150px;
+    margin: 10px;
+    background: #448AFF;
+    color: white;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+    cursor: pointer;
 }
-
-
-.conosco {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.conosco button {
-    width: 168px;
-    height: 78px;
-    border: 1px;
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(38, 0, 255);
-    border: 1px solid black;
-    font-size: 32px;
-    font-family: "Inter";
-    font-style: "Regular";
-
-
-}
-
-
-.tabela {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 20px 300px;
-    font-size: 30px;
-    font-family: "Inika";
-}
-
 
 table {
-    border-collapse: collapse;
-    height: 400px;
-}
-
-
-table,
-th,
-td {
-    border: 2px solid black;
-    width: 700px;
-}
-
-
-th,
-td {
-    padding: 8px;
-    text-align: center;
-}
-
-
-.h3 {
-    background-color: #2550ff;
     width: 100%;
-    font-size: 36px;
-    font-style: "Regular";
-    font-family: "Inika";
-    color: rgb(255, 255, 255);
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: "Inika", sans-serif;
+    font-size: 26px;
+    background: rgb(248, 243, 243);
+    color: black;
+}
+
+th {
+    border: 1px solid #020101;
+    padding: 20px;
+    background-color: #448AFF;
+
+
+}
+
+td {
+    border: 1px solid #020101;
+    padding: 20px;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
-.opcao {
+.fale-conosco {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 207px;
-    border: 1px solid rgb(0, 0, 0);
+    background: white;
 }
-
 
 select {
-    width: 417px;
-    height: 47px;
-    margin: 15px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    height: 40px;
+    width: 260px;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+
 }
 
-
 textarea {
-    width: 417px;
-    height: 85px;
-    margin: 15px;
+    border-radius: 8px;
+    border: 1px solid #DADADA;
+    height: 100px;
+    width: 238px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 26px;
+    font-family: "Inika", sans-serif;
+    resize: none;
+
+
 }
 
 aside {
     margin-left: 100px;
     margin-top: 20px;
     padding: 20px;
-    font-family: 'inika', sans-serif;
+    font-family: "Inika", sans-serif;
     font-size: 26px;
-    color: white;
+    color: black;
     border: 2px solid white;
 
+
+
 }
 
-
-aside input,
-aside select,
-aside textarea,
-aside button {
-    background-color: rgb(76, 139, 255);
+p {
+    margin: 0 0 10px 0;
+    font-family: "Inika", sans-serif;
+    font-size: 26px;
     color: white;
-    width: 252px;
-    height: 51px;
-    font-size: 36px;
-    font-family: 'inika';
-    font-weight: 400;
-    font-style: normal;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    vertical-align: middle;
 }
+
+aside fieldset{
+    border:0;
+}
+
+aside legend{
+        display: none;
+     }
+
+     
+
+@media(max-width: 768px) {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 150px;
+        background-color: #303AFF;
+        font-family: "Inter";
+    }
+
+    header h1 {
+        font-size: 32px;
+        font-family: "Inter";
+
+    }
+
+    header button {
+        width: 50px;
+        height: 28px;
+        color: white;
+        background-color: #43B2AC;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter";
+
+
+
+    }
+
+    header div {
+        display: flex;
+        align-self: flex-start;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:stretch;
+    }
+
+    aside {
+        display: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    h1 {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color:#448AFF;
+    
+      
+        
+
+
+    }
+
+    h3 {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        color:black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin:0;
+        padding:0;
+        height: 50px;
+
+
+    }
+
+    h2 {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        background-color: #448AFF;
+        color: #303AFF;
+        margin:0;
+        padding:0;
+        height: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h5{
+        font-family: "Inter", sans-serif ;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        color:black;
+        height: 50px;
+
+    }
+    aside form{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+   aside fieldset{
+        border: 1px solid #000;
+        border-radius: 10px;      
+        margin: 10px;
+        padding: 0;
+        width: 80%;
+        height:60px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+     
+       
+
+    }
+
+    aside legend{
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        color: black;
+        padding: 0;
+        margin: 0;
+        
+
+    }
+
+    input,textarea,select{
+        height: 27px;
+        outline: none;
+        border:0;
+        font-size: 15px;
+         padding: 0;
+        margin: 0;
+    }
+
+    button#inserir{
+        display:none;
+    }
+    .button-inserir{
+        cursor: pointer;
+    }
+    
+    input::placeholder,textarea::placeholder{
+        color:transparent;
+
+    }
+
+    .ocultar,select#turno{
+        border: 0;
+        color:transparent;
+
+    }
+
+    
+    table,th,td{
+        font-size: 15px;
+        border: 1px solid black;
+        padding: 0px;
+        margin: 0;
+        text-align: center;
+       
+    }
+
+    form,input#date,select#turno{
+        font-size: 15px;
+    }
+ .fale-conosco{
+    flex-direction: column;
+    width: 100%s;
+
+ }
+
+ .fale-conosco div{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+section select{
+    border:1px solid black;
+    margin:10px;
+    width: 342px;
+}
+section textarea{
+    border:1px solid black;
+    width: 342px;
+    height:133px;
+}
+}
+
+    
