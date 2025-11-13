@@ -1,4 +1,4 @@
-const API_USUARIOS = 'https://cozinha-system-8zsa.onrender.com';
+const API_USUARIOS = 'https://cozinha-system-rvnz.onrender.com';
 async function tratarErroResponse(res, msgPadrao) {
     const textErro = await res.text();
     let msgErro;
