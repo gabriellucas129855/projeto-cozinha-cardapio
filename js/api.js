@@ -1,4 +1,4 @@
-const API_USUARIOS = 'https://api-storage-cantina-main-theta.vercel.app/';
+const API_USUARIOS = 'https://cozinha-system-8zsa.onrender.com';
 async function tratarErroResponse(res, msgPadrao) {
     const textErro = await res.text();
     let msgErro;
@@ -10,7 +10,7 @@ async function tratarErroResponse(res, msgPadrao) {
     }
     return { sucesso: false, msg: msgErro || "Erro desconhecido na API", };
 }
-async function loginCozinheira(email, senha) {
+export async function loginCozinheira(email, senha) {
     try {
         const res = await fetch(API_USUARIOS + "/login", {
             method: "POST",
@@ -29,12 +29,14 @@ async function loginCozinheira(email, senha) {
         }
 
 
+
+
     } catch (error) {
         console.error("Erro ao fazer login", error);
         return { sucesso: false, mensagem: 'Erro de conexão a API' }
     }
 }
-async function cadastrarCozinheira(nome, email, senha) {
+export async function cadastrarCozinheira(nome, email, senha) {
     try {
         const res = await fetch(API_USUARIOS + "/cadastro", {
             method: "POST",
@@ -46,12 +48,14 @@ async function cadastrarCozinheira(nome, email, senha) {
         return { sucesso: true, user: data.usuario || null }
 
 
+
+
     } catch (error) {
         console.error("Erro ao fazer cadastro", error);
         return { sucesso: false, mensagem: 'Erro de conexão a API' }
     }
 }
-async function recuperarSenha(email) {
+export async function recuperarSenha(email) {
     try {
         const res = await fetch(API_USUARIOS + "/recuperar", {
             method: "POST",
@@ -61,6 +65,8 @@ async function recuperarSenha(email) {
         if (!res.ok) return await tratarErroResponse(res, 'Erro ao recuperar senha');
         const data = await res.json();
         return { sucesso: true, msg: data.msg || 'Instruções enviadas ao seu email', }
+
+
 
 
     } catch (error) {
@@ -75,33 +81,55 @@ export async function listarCardapio() {
         return cardapios;
     } catch (error) {
         console.error('Erro ao listar cardapio', error);
-        alert('ocorreu um erro ao listar cardápio');
+        alert('Ocorreu um erro ao listar cardápio');
     }
 }
 export async function cadastrarCardapio(cardapio) {
     try {
-
-
+        cardapio.usuarioId = Number(localStorage.getItem("usuarioId"));
+        const res = await fetch(API_USUARIOS, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(cardapio)
+        });
+        if (res.ok) {
+            alert("Refeição cadastrada com sucesso!");
+            listarCardapio();
+        } else {
+            alert("Erro ao cadastrar refeição")
+        }
     } catch (error) {
         console.error('Erro ao cadastrar cardapio', error);
-        alert('ocorreu um erro ao cadastrar cardápio');
+        alert('Ocorreu um erro ao cadastrar cardápio');
     }
 }
 export async function alterarCardapio(id, atualizarCardapio) {
     try {
         const res = await fetch(API_USUARIOS);
-        const cardapios = await res.json();
+        const cardapio = await res.json();
+        document.querySelector("#date").value = cardapio.data.split("T")[0];
+        document.querySelector("select#turnos").value = cardapio.turno;
+        document.querySelector("input[name='refeicao']").value = cardapio.refeicao.titulo;
+        document.querySelector("textarea[name='itens']").value = cardapio.refeicao.itens.join(",");
+        document.querySelector("input[name='bebida']").value = cardapio.refeicao.bebida.join(",");
+        if (cardapio - lanche) {
+            document.querySelector("input[name='refeicao']").value = cardapio.lanche.titulo;
+            document.querySelector("textarea[name='itens']").value = cardapio.lanche.itens.join(",");
+            document.querySelector("input[name='bebida']").value = cardapio.lanche.bebida.join(",");
+        }
+
+
     } catch (error) {
         console.error('Erro ao alterar cardapio', error);
-        alert('ocorreu um erro ao alterar cardápio');
+        alert('Ocorreu um erro ao alterar cardápio');
     }
 }
 export async function excluirCardapio(id) {
     try {
-        const res = await fetch(API_USUARIOS);
+        const res = await fetch(`API_USUARIOS/${id}`);
     } catch (error) {
         console.error('Erro ao excluir cardapio', error);
-        alert('ocorreu um erro ao excluir cardápio');
+        alert('Ocorreu um erro ao excluir cardápio');
     }
 }
 export async function buscarCardapio(id) {
@@ -109,7 +137,7 @@ export async function buscarCardapio(id) {
         const res = await fetch(API_USUARIOS);
     } catch (error) {
         console.error('Erro ao buscar cardapio', error);
-        alert('ocorreu um erro ao buscar cardápio');
+        alert('Ocorreu um erro ao buscar cardápio');
     }
 }
 export async function exibirTabelaCardapio(cardapio) {
@@ -117,7 +145,7 @@ export async function exibirTabelaCardapio(cardapio) {
         const res = await fetch(API_USUARIOS);
     } catch (error) {
         console.error('Erro ao exibir a tabela do cardapio', error);
-        alert('ocorreu um erro ao exibir a tabela cardápio');
+        alert('Ocorreu um erro ao exibirir tabela cardápio');
     }
 }
 
